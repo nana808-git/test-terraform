@@ -38,4 +38,4 @@ jobs:
       continue-on-error: true
 
     - name: Terraform Apply 
-      run: terraform -chdir=Prd apply -auto-approve
+      run: terraform -chdir=Dev apply -auto-approve
