@@ -25,17 +25,17 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1 
 
-   - name: Setup Terraform
-     uses: hashicorp/setup-terraform@v1
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v1
       
-   - name: Terraform Init 
-     id: init
-     run: terraform -chdir=Dev init
+    - name: Terraform Init 
+      id: init
+      run: terraform -chdir=Dev init
  
-   - name: Terraform Plan 
-     id: plan
-     run: terraform -chdir=Dev plan 
-     continue-on-error: true
+    - name: Terraform Plan 
+      id: plan
+      run: terraform -chdir=Dev plan 
+      continue-on-error: true
 
-   - name: Terraform Apply 
-     run: terraform -chdir=Prd apply -auto-approve
+    - name: Terraform Apply 
+      run: terraform -chdir=Prd apply -auto-approve
