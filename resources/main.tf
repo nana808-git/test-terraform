@@ -6,3 +6,11 @@ resource "aws_vpc" "test" {
     Name = "Test-VPC"
   }
 }
+
+resource "aws_internet_gateway" "test" {
+  vpc_id = aws_vpc.test.id
+
+  tags = {
+    Name = "Test-IGW"
+  }
+}
