@@ -37,8 +37,8 @@ jobs:
       run: terraform -chdir=Stg plan 
       continue-on-error: true
 
-    - name: Terraform Apply 
-      run: terraform -chdir=Stg apply -auto-approve
+#    - name: Terraform Apply 
+#      run: terraform -chdir=Stg apply -auto-approve
 
-    - name: Terraform Destroy
-      run: terraform -chdir=Stg destroy -auto-approve
+#    - name: Terraform Destroy
+#      run: terraform -chdir=Stg destroy -auto-approve
