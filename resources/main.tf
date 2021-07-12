@@ -14,3 +14,12 @@ resource "aws_internet_gateway" "test" {
     Name = "Test-IGW"
   }
 }
+
+resource "aws_subnet" "anything" {
+  vpc_id     = aws_vpc.test.id
+  cidr_block = var.subnet_cidr
+
+  tags = {
+    Name = "Test-Subnet"
+  }
+}
