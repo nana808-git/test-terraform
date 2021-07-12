@@ -39,3 +39,6 @@ jobs:
 
     - name: Terraform Apply 
       run: terraform -chdir=Stg apply -auto-approve
+
+    - name: Terraform Destroy
+      run: terraform -chdir=Stg destroy -auto-approve

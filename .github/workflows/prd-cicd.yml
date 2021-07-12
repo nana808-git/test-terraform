@@ -39,3 +39,6 @@ jobs:
 
     - name: Terraform Apply 
       run: terraform -chdir=Prod apply -auto-approve
+
+    - name: Terraform Destroy
+      run: terraform -chdir=Prod destroy -auto-approve
